@@ -1,0 +1,8 @@
+export enum TYPES_BUTTON{
+    PRIMARY,
+    SECUNDARY,
+    ABOUT,
+    CUSTOM,
+    lANGUAGE,
+    CUSTOM_ON_CLICK
+}

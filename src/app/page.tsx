@@ -1,9 +1,74 @@
 "use client"
-
+import { TYPES_SECUNDARY_CARD } from "./utils/typesSecundaryCards";
+import { TYPES_TITTLE } from "./utils/typesTitles";
+import { TYPES_CARD } from "./utils/typesCard";
+import { TYPES_BUTTON } from "./utils/typesButton";
+import TittleUI from "./components/UI/Titles";
+import ButtonUI from "./components/Forms/Button";
+import Image from "next/image";
+import Card from "./components/Data display/Card";
+import SecondaryCard from "./components/Data display/SecundaryCard";
 export default function Home() {
   return (
   <>
-
-  </>
+      <section className="p-primary w-full h-screen flex flex-wrap">
+        <div className="w-3/5">
+          <TittleUI
+            variant={TYPES_TITTLE.PRINCIPAL}
+            content="Title"
+            custom="px-16 mt-16 text-8xl font-bold"
+          />
+          <p className="ml-16 mt-8 text-xl p-secundary-color max-w-[70%]" >description</p>
+          <ButtonUI content={"start"} navLink="dashboard/shop" variant={TYPES_BUTTON.CUSTOM} custom="ml-14 mt-14 px-20 py-3 rounded-full border border-[2.5px] p-primary-blue font-medium text-cyan-400 font-xl hover:bg-cyan-400/10 transition-colors" />
+        </div>
+        <div className="w-2/5">
+          {/* <Image src="https://icon.icepanel.io/Technology/svg/React.svg" width=100 alt="React brand" sizes="none" className="h-[75%] w-full" /> */}
+        </div>
+      </section>
+      <div className="bg-gradient-to-b from-[#222222] to-black flex justify-center py-8">
+        <TittleUI content={"titles.titleOne"} variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
+      </div>
+      <section className="bg-black flex justify-around py-12" >
+        <Card
+          content="Components"
+          variant={TYPES_CARD.BLUE}
+          linkCard={"links.linkCard"}
+          contentAll={"main.components"}
+        />
+        <Card
+          content="Hooks"
+          variant={TYPES_CARD.PURPPLE}
+          linkCard={"links.linkCard"}
+          contentAll={"main.hooks"}
+        />
+        <Card
+          content="Props"
+          variant={TYPES_CARD.ORANGE}
+          linkCard={"links.linkCard"}
+          contentAll={"main.props"}
+        />
+      </section>
+      <div className="bg-black flex justify-center py-8">
+        <TittleUI content={"titles.titleTwo"} variant={TYPES_TITTLE.ABOUT} custom="text-white font-bold text-5xl " />
+      </div>
+      <section className="bg-black flex justify-center py-8">
+        <SecondaryCard
+          source="https://elpythonista.com/wp-content/uploads/2020/10/Clean_Code-portada-1024x576.jpg"
+          variant={TYPES_SECUNDARY_CARD.LEFT}
+          title="Clean code"
+          description={"main.cleanCode"}
+          linkSecundaryCard={"links.linkSecundaryCard"}
+        />
+      </section>
+      <section className="bg-black flex justify-center py-8">
+        <SecondaryCard
+          source="https://i.pinimg.com/736x/30/f0/89/30f08901a1d1409041039957a44aaffd.jpg"
+          variant={TYPES_SECUNDARY_CARD.RIGHT}
+          title="Solid principles"
+          description={"main.solidPrinciples"}
+          linkSecundaryCard={"links.linkSecundaryCard"}
+        />
+      </section>
+    </>
   );
 }

@@ -28,7 +28,7 @@ export default function SecondaryCard({
       secundaryCardElement = (
         <div className="flex overflow-hidden rounded-xl border-gray-400 border-2 text-white shadow-md shadow-gray-400 max-w-6xl min-h-64">
           <div className="w-2/5 p-4">
-            <Image src={source} alt="Image About this" sizes="" className="" />
+            {/* <Image src={source} alt="Image About this" sizes="" className="" /> */}
           </div>
           <div className="flex w-3/5 flex-col justify-between p-6">
             <div>
@@ -55,11 +55,11 @@ export default function SecondaryCard({
             </div>
           </div>
           <div className="w-2/5 p-4 justify-center">
-            <Image
+            {/* <Image
               src={source}
               alt="Image About this"
               sizes=""
-              className="" />
+              className="" /> */}
           </div>
         </div>
       )

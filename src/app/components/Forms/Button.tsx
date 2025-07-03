@@ -1,5 +1,8 @@
+"use client"
+
 import React, { MouseEventHandler } from "react";
 import { TYPES_BUTTON } from "@/app/utils/typesButton";
+import { useRouter } from "next/navigation";
 
 type buttonTypes = {
    content: string,
@@ -11,7 +14,8 @@ type buttonTypes = {
 const ButtonUI = ({ content, variant, custom, navLink, onClick }: buttonTypes) => {
 
    let buttonElemnt: React.ReactElement = <></>;
-   
+   const router = useRouter()
+   let HasNavLink = navLink ? navLink: "";
 
 //    const { i18n } = useTranslation();
 //    const changeLanguage = (lng: string) => {
@@ -31,7 +35,7 @@ const ButtonUI = ({ content, variant, custom, navLink, onClick }: buttonTypes) =
          break
       case TYPES_BUTTON.CUSTOM:
          buttonElemnt = (
-            <button onClick={() => {  }} className={`font-Roboto ${custom}`}>{content}</button>
+            <button onClick={() => { router.push(HasNavLink) }} className={`font-Roboto ${custom}`}>{content}</button>
          );
          break
          case TYPES_BUTTON.CUSTOM_ON_CLICK:

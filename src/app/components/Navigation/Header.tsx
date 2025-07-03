@@ -16,8 +16,8 @@ export default function Header({ custom }: NavbarTypes) {
                 <div className="flex items-center">
                     <LinkUI link="/" content={"project"} variant={TYPE_LINKS.TITTLE_LINK} custom="mr-6" />
                     <nav className="flex items-center space-x-8">
-                        <LinkUI link="/" content={"home"} variant={TYPE_LINKS.NAV_LINK} />
-                        <LinkUI link="/dashboard/shop" content={"catalog"} variant={TYPE_LINKS.NAV_LINK} />          </nav>
+                        <LinkUI link="/" content={"Home"} variant={TYPE_LINKS.NAV_LINK} />
+                        <LinkUI link="/dashboard/shop" content={"Shop"} variant={TYPE_LINKS.NAV_LINK} />          </nav>
                 </div>
 
                 <div className="flex items-center space-x-4">

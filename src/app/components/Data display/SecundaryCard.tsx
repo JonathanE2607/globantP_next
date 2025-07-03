@@ -26,9 +26,16 @@ export default function SecondaryCard({
     
     case TYPES_SECUNDARY_CARD.LEFT:
       secundaryCardElement = (
-        <div className="flex overflow-hidden rounded-xl border-gray-400 border-2 text-white shadow-md shadow-gray-400 max-w-6xl min-h-64">
-          <div className="w-2/5 p-4">
-            {/* <Image src={source} alt="Image About this" sizes="" className="" /> */}
+        <div className="flex overflow-hidden rounded-xl border-gray-400 border-2 text-white shadow-md shadow-gray-400 xl:max-w-6xl min-h-64 2xl:max-w-10/12">
+          <div className=" p-4 w-3/6">
+             <Image
+              src={source}
+              alt="Image About this"
+              width={900}
+              height={900}
+              className=""
+              
+               /> 
           </div>
           <div className="flex w-3/5 flex-col justify-between p-6">
             <div>
@@ -44,7 +51,7 @@ export default function SecondaryCard({
       break;
     case TYPES_SECUNDARY_CARD.RIGHT:
       secundaryCardElement = (
-        <div className="flex overflow-hidden rounded-xl border-2 shadow-md shadow-gray-400 border-gray-400 text-white max-w-6xl min-h-64">
+        <div className="flex overflow-hidden rounded-xl border-2 shadow-md shadow-gray-400 border-gray-400 text-white max-w-6xl min-h-64 2xl:max-w-10/12">
           <div className="flex w-3/5 flex-col justify-between p-6">
             <div>
               <h2 className="mb-4 text-xl font-bold">{title}</h2>
@@ -54,12 +61,14 @@ export default function SecondaryCard({
               <ButtonUI content="More info" variant={TYPES_BUTTON.ABOUT} />
             </div>
           </div>
-          <div className="w-2/5 p-4 justify-center">
-            {/* <Image
+          <div className="w-3/6 p-4 justify-center">
+             <Image
               src={source}
+              width={1000}
+              height={900}
               alt="Image About this"
               sizes=""
-              className="" /> */}
+              className="" /> 
           </div>
         </div>
       )
